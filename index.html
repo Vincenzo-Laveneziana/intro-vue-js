@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First vue</title>
+
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+    
+    <!-- Vue will work only inside here -->
+    <div id="app">
+        <div class="navbar">
+            <div class="brand">Vue Shop</div>
+            <div class="cart">Cart  {{cart.length}} </div>
+        </div>
+
+        <product :premium="premium" 
+            @add-to-cart="addCart" 
+            @remove-from-cart="removeCart"
+        >
+        </product>
+        
+    </div>
+
+
+    
+    <!-- Vue-->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <!-- Js -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
